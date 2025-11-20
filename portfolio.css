@@ -81,8 +81,8 @@ html {
 /*phan than*/
 .web-container {
     width: 100%;
-    min-height: 140vh;  
-    padding-top: 160px;  
+    min-height: 120vh;  
+    padding-top: 120px;  
     padding-bottom: 120px;
     display: flex;
 }
@@ -364,7 +364,6 @@ html {
     color: var(--color-bg);
     text-align: center;
     margin-bottom: px;
-    margin-top: -120px;
     width: 100%;
 }
 .pr{
@@ -445,7 +444,6 @@ html {
     color: var(--color-bg);
     text-align: center;
     margin-bottom: px;
-    margin-top: -120px;
     width: 100%;
 }
 /* hiệu ứng xuất hiện từ dưới lên */
