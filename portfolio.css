@@ -581,3 +581,8 @@ html {
         width: 100%;
     }
 }
+section, 
+[id] {
+    scroll-margin-top: 160px; /* cao bằng navbar */
+}
+
