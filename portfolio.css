@@ -4,6 +4,7 @@
     --color-or:#FA824C;
     --color-sa:#CFDBD5;
     --color-ng:#171614;
+    --nav-height: 100hv;
 
 }
 * {
@@ -20,7 +21,7 @@ body {
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 140px;
+  scroll-padding-top: var(--nav-height);
 }
 
 
@@ -41,6 +42,7 @@ html {
     left: 0;
     width: 99vw;         /* Chiếm full chiều ngang */
     z-index: 1000;       /* Nằm trên các phần khác */  
+   
 }
 .logo{
     font-size: 50px;
@@ -82,11 +84,9 @@ html {
 /*phan than*/
 .web-container {
     width: 100%;
-    min-height: 100vh;   /* chiếm đúng 1 màn hình */
-    padding-top: 140px;  /* tạo khoảng cách dưới thanh menu fixed */  
-    padding-bottom: 120px;
+    min-height: 110vh;   /* chiếm đúng 1 màn hình */
     display: flex;
-    scroll-margin-top: 140px; /* bằng chiều cao navbar */
+    scroll-margin-top: var(--nav-height); /* bằng chiều cao navbar */
 }
 
 .web-home{
@@ -262,6 +262,13 @@ html {
 }
 .title-about p{
     font-size:20px;
+    line-height:1.5;
+    background-color: rgba(255,255,255,0.05);
+    padding:20px 25px;
+    border-radius:15px;
+    border-left:4px solid var(--color-or);
+    margin-top:15px;
+    text-align: justify;
 }
 .personal{
     width: 100%;
@@ -421,10 +428,55 @@ html {
     transition: transform 0.3s, box-shadow 0.3s; /* thêm hiệu ứng mượt */
 }
 .item-work img{
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
     border-radius: 15px;
 
+}
+.project-title{
+    font-size:20px;
+    color:var(--color-ng);
+    margin-top:10px;
+}
+.project-tech{
+    font-size:14px;
+    color:#666;
+    margin-top:5px;
+}
+.project-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:15px;
+}
+
+.btn-project{
+    text-decoration:none;
+    padding:8px 14px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    transition:0.3s;
+}
+.github{
+    background-color:#24292e;
+    color:white;
+}
+
+.github:hover{
+    background-color:#000;
+}
+.demo{
+    background-color:var(--color-or);
+    color:white;
+}
+
+.demo:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px rgba(255,102,0,0.6);
 }
 /* Khi hover */
 .item-work:hover {
@@ -467,6 +519,82 @@ html {
 .item-work:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 0 35px rgba(0,0,0,0.3);
+}
+
+
+/* ========================
+   SKILLS SECTION
+======================== */
+
+.web-skills{
+    background-color: var(--color-header);
+}
+
+/* grid layout */
+.skills-grid{
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    flex-wrap:wrap;
+    gap:40px;
+    width:100%;
+    margin-top:40px;
+}
+
+/* card */
+.skill-card{
+    width:260px;
+    background-color:white;
+    padding:30px;
+    border-radius:20px;
+    border:2px solid var(--color-or);
+    transition:0.3s;
+    box-shadow:0 0 25px rgba(0,0,0,0.3);
+}
+
+/* hover */
+.skill-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 35px rgba(250,130,76,0.6);
+}
+
+/* title */
+.skill-card h2{
+    color:var(--color-or);
+    font-size:22px;
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+}
+
+/* icon */
+.skill-card i{
+    margin-right:10px;
+}
+
+/* tag container */
+.skill-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+/* skill tag */
+.skill-tags span{
+    padding:8px 14px;
+    border-radius:20px;
+    border:1px solid var(--color-or);
+    color:var(--color-bg);
+    background-color:var(--color-or);
+    font-size:14px;
+    transition:0.3s;
+}
+
+/* hover tag */
+.skill-tags span:hover{
+    background-color:var(--color-bg);
+    color:var(--color-or);
+    transform:scale(1.05);
 }
 /* ==============================
    RESPONSIVE FOR TABLET & MOBILE
