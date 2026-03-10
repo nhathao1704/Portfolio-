@@ -596,119 +596,299 @@ html {
     color:var(--color-or);
     transform:scale(1.05);
 }
-/* ==============================
-   RESPONSIVE FOR TABLET & MOBILE
-   ============================== */
 
-/* Tablet & small laptop */
+
+/* ========================
+   RESPONSIVE DESIGN
+======================== */
+
+/* Tablet (iPad) */
 @media (max-width: 1024px) {
+    /* Navigation */
     .nav {
-        padding: 20px;
+        padding: 15px 20px;
     }
-
+    
+    .logo {
+        font-size: 35px;
+        width: auto;
+        margin-left: 0;
+    }
+    
+    .menu {
+        width: auto;
+        margin-right: 0;
+    }
+    
+    .nav ul {
+        gap: 25px;
+    }
+    
+    .nav ul li a {
+        font-size: 20px;
+    }
+    
+    /* Header */
+    .header {
+        flex-direction: column-reverse;
+        padding: 80px 20px 20px;
+    }
+    
+    .header-info {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+        margin-top: 30px;
+    }
+    
+    .header-title {
+        align-items: center;
+    }
+    
+    .header-title p {
+        font-size: 25px;
+    }
+    
     .header-info h1 {
         font-size: 50px;
     }
-
+    
     .header-img {
+        width: 280px;
+        height: 280px;
+        margin-right: 0;
+    }
+    
+    /* About */
+    .main-about {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .img-about {
         width: 300px;
         height: 300px;
     }
-
-    .project-work {
-        flex-wrap: wrap;
-        justify-content: center;
+    
+    .content-about {
+        width: 90%;
+        margin-top: 0;
+    }
+    
+    .title-about h1 {
+        font-size: 50px;
+    }
+    
+    .title-about p {
+        font-size: 16px;
+    }
+    
+    .info-about {
+        flex-direction: column;
         gap: 20px;
     }
-
+    
+    /* Work */
+    .main-work h1 {
+        font-size: 60px;
+    }
+    
+    .project-work {
+        flex-direction: column;
+    }
+    
     .item-work {
+        width: 100%;
+    }
+    
+    .item-work img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+    
+    /* Skills */
+    .main-skills h1 {
+        font-size: 60px;
+    }
+    
+    .skills-grid {
+        gap: 20px;
+    }
+    
+    .skill-card {
         width: 45%;
+        min-width: 250px;
     }
 }
 
 /* Mobile */
-@media (max-width: 768px) {
-    .nav ul {
-        gap: 20px;
-    }
-
-    .logo {
-        font-size: 35px;
-    }
-
-    .header {
+@media (max-width: 600px) {
+    /* Navigation */
+    .nav {
         flex-direction: column;
-        gap: 30px;
-        text-align: center;
+        padding: 15px;
+        gap: 15px;
     }
-
-    .header-info {
+    
+    .logo {
+        font-size: 28px;
+    }
+    
+    .menu {
         width: 100%;
-        text-align: center;
     }
-
+    
+    .nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav ul li a {
+        font-size: 16px;
+    }
+    
+    /* Header */
+    .header {
+        padding: 120px 15px 20px;
+    }
+    
+    .header-title p {
+        font-size: 18px;
+    }
+    
+    .header-info h1 {
+        font-size: 36px;
+    }
+    
     .header-info p {
         font-size: 24px;
     }
-
-    .header-info h1 {
+    
+    .header-img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .social {
+        gap: 20px;
+    }
+    
+    .icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .icon a {
+        font-size: 24px;
+    }
+    
+    /* Dot navigation */
+    .Dot {
+        display: none;
+    }
+    
+    /* About */
+    .img-about {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .title-about h1 {
         font-size: 40px;
     }
-
-    .header-img {
-        width: 60vw;
-        height: 60vw;
+    
+    .title-about p {
+        font-size: 14px;
+        padding: 15px;
     }
-
-    /* ABOUT */
-    .main-about {
+    
+    .personal h1 {
+        font-size: 20px;
+    }
+    
+    .items-about {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
+        gap: 5px;
     }
-
-    .img-about {
-        width: 70vw;
-        height: 70vw;
+    
+    .items-about p {
+        font-size: 16px;
     }
-
-    .content-about {
+    
+    .info-about-right,
+    .info-about-left {
         width: 100%;
     }
-
-    /* PROJECT */
-    .project-work {
+    
+    /* Work */
+    .main-work h1 {
+        font-size: 40px;
+    }
+    
+    .catelogy-work {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .project-title {
+        font-size: 16px;
+    }
+    
+    .project-tech {
+        font-size: 12px;
+    }
+    
+    .project-buttons {
         flex-direction: column;
+    }
+    
+    .btn-project {
+        width: 100%;
         justify-content: center;
-        align-items: center;
     }
-
-    .item-work {
-        width: 90%;
-    }
-
-    /* SKILLS TITLE */
+    
+    /* Skills */
     .main-skills h1 {
-        font-size: 60px;
+        font-size: 40px;
     }
-}
-
-/* Small mobile */
-@media (max-width: 480px) {
-    .header-info h1 {
-        font-size: 32px;
+    
+    .skill-card {
+        width: 100%;
+        padding: 20px;
     }
-
-    .header-info p {
+    
+    .skill-card h2 {
         font-size: 18px;
     }
-
-    .header-img {
-        width: 70vw;
-        height: 70vw;
-    }
-
-    .item-work {
-        width: 100%;
+    
+    .skill-tags span {
+        font-size: 12px;
+        padding: 6px 10px;
     }
 }
+
+/* Small Mobile */
+@media (max-width: 400px) {
+    .header-info h1 {
+        font-size: 28px;
+    }
+    
+    .header-img {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .title-about h1 {
+        font-size: 32px;
+    }
+    
+    .img-about {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 
