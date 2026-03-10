@@ -20,6 +20,7 @@ body {
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 140px;
 }
 
 
@@ -85,6 +86,7 @@ html {
     padding-top: 140px;  /* tạo khoảng cách dưới thanh menu fixed */  
     padding-bottom: 120px;
     display: flex;
+    scroll-margin-top: 140px; /* bằng chiều cao navbar */
 }
 
 .web-home{
@@ -580,9 +582,5 @@ html {
     .item-work {
         width: 100%;
     }
-}
-section, 
-[id] {
-    scroll-margin-top: 160px; /* cao bằng navbar */
 }
 
